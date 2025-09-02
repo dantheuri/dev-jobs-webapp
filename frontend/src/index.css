@@ -1,14 +1,21 @@
 @import "tailwindcss";
 
+html, body, #root {
+  height: 100%;
+  width: 100%;
+}
+
 @font-face {
-	font-family: "KumbhSans";
-	src: url("./assets/fonts/KumbhSans-VariableFont_YOPQ,wght.ttf")
-		format("truetype");
-    font-weight: 100 900; 
-    font-style: "Normal"; 
-    font-display: swap; 
+  font-family: "KumbhSans";
+  src: url("./assets/fonts/KumbhSans-VariableFont_YOPQ,wght.ttf")
+    format("truetype");
+  font-weight: 100 900;
+  font-style: "Normal";
+  font-display: swap;
 }
 
 @theme {
-    --font-kumbh: "KumbhSans"; 
+  --font-kumbh: "KumbhSans";
 }
+
+@custom-variant dark (&:where(.dark, .dark *));

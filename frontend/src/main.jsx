@@ -1,10 +1,18 @@
-import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
-import './index.css'
-import App from './App.jsx'
+import { StrictMode } from "react";
+import { createRoot } from "react-dom/client";
+import "./index.css";
+import JobsDashboard from "./pages/JobsDashboard.jsx";
+import JobDescription from "./pages/JobDescription.jsx";
+import { createBrowserRouter } from "react-router";
+import { RouterProvider } from "react-router/dom";
 
-createRoot(document.getElementById('root')).render(
+const router = createBrowserRouter([
+  { path: "/", element: <JobsDashboard /> },
+  { path: "/job/:id", element: <JobDescription /> },
+]);
+
+createRoot(document.getElementById("root")).render(
   <StrictMode>
-    <App />
-  </StrictMode>,
-)
+    <RouterProvider router={router} />
+  </StrictMode>
+);

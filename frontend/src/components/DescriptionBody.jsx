@@ -5,9 +5,9 @@ const DescriptionBody = ({ job }) => {
 
   return (
     <main>
-      <div className="companyInformationWrapper flex justify-center -mt-3 md:-mt-8 lg:-mt-8 sm:-mt-10 lg:px-10">
-        <div className="w-[85%] md:w-[43rem] lg:w-[60rem] xl:w-[70rem] bg-white dark:bg-[#19202D] rounded-lg shadow-lg flex items-center px-3 sm:px-0 lg:px-6">
-          <div className="flex flex-col sm:flex-row sm:h-[8rem] items-center gap-6 sm:gap-8 lg:gap-6 w-full pt-3 pb-8 sm:py-0 pr-6">
+      <div className="companyInformationWrapper flex justify-center -mt-3 md:-mt-8 lg:-mt-8 sm:-mt-10">
+        <div className="w-[85%] md:w-[43rem] lg:w-[60rem] xl:w-[70rem] bg-white dark:bg-[#19202D] rounded-lg shadow-lg flex items-center">
+          <div className="flex flex-col sm:flex-row sm:h-[8rem] items-center gap-6 sm:gap-8  w-full pt-3 pb-8 sm:py-0 sm:pr-6">
             {logoData && (
               <div
                 className={`flex justify-center size-[3.5rem] sm:h-full sm:w-[8rem] -mt-10 sm:mt-0 flex-shrink-0 ${

@@ -47,7 +47,7 @@ const Jobs = () => {
             <div className="flex items-center gap-2 sm:gap-3 flex-1 min-w-0">
               <SearchIcon
                 color="#5964E0"
-                className="w-4 h-4 sm:w-5 sm:h-5 flex-shrink-0"
+                className="w-4 h-4 sm:w-5 sm:h-5 flex-shrink-0 hidden sm:block"
               />
               <input
                 type="text"
@@ -63,7 +63,7 @@ const Jobs = () => {
               <img
                 src={locationIcon}
                 alt="Location Pin"
-                className="w-4 h-4 sm:w-5 sm:h-5 flex-shrink-0 object-contain"
+                className="w-4 h-4 sm:w-5 sm:h-5 flex-shrink-0 object-contain "
               />
               <input
                 type="text"
@@ -95,12 +95,12 @@ const Jobs = () => {
             <img
               src={mobileFilterIcon}
               alt="Mobile Filter Icon"
-              className="w-4 h-4 sm:w-5 sm:h-5 flex-shrink-0"
+              className="sm:hidden w-4 h-4 sm:w-5 sm:h-5 flex-shrink-0"
             />
             {/* Search Button */}
             <button
               onClick={handleSearch}
-              className="size-8 sm:size-10 lg:w-[7.7rem] bg-[#5964E0] flex items-center justify-center rounded-md flex-shrink-0 hover:bg-[#4A55D1] transition-colors cursor-pointer"
+              className="size-8 sm:w-20 sm:h-10 lg:w-[7.7rem] bg-[#5964E0] flex items-center justify-center rounded-md flex-shrink-0 hover:bg-[#4A55D1] transition-colors cursor-pointer"
             >
               <SearchIcon
                 color="white"
@@ -113,7 +113,7 @@ const Jobs = () => {
             {/* 🔹 Reset Button */}
             <button
               onClick={handleReset}
-              className="ml-2 size-8 sm:size-10 lg:w-[7.7rem] bg-gray-300 text-gray-800 flex items-center justify-center rounded-md flex-shrink-0 hover:bg-gray-400 transition-colors cursor-pointer"
+              className="size-8 sm:w-20 sm:h-10 lg:w-[7.7rem] bg-gray-300 text-gray-800 flex items-center justify-center rounded-md flex-shrink-0 hover:bg-gray-400 transition-colors cursor-pointer"
             >
               <span className="hidden sm:block font-semibold text-sm lg:text-base">
                 Reset

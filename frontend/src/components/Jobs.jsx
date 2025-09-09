@@ -41,7 +41,7 @@ const Jobs = () => {
   return (
     <main className="pb-20">
       <div className="searchFiltersWrapper flex justify-center -mt-8 md:-mt-8 lg:-mt-8 sm:-mt-10 lg:px-10">
-        <div className="w-[85%] md:w-[43rem] lg:w-[60rem] xl:w-[70rem] bg-white rounded-lg shadow-lg flex items-center px-3 sm:px-4 lg:px-6">
+        <div className="w-[90%] md:w-[43rem] lg:w-[60rem] xl:w-[70rem] bg-white rounded-lg shadow-lg flex items-center px-3 sm:px-4 lg:px-6">
           <div className="flex items-center gap-2 sm:gap-3 lg:gap-6 w-full py-3 sm:py-4">
             {/* Title Filter */}
             <div className="flex items-center gap-2 sm:gap-3 flex-1 min-w-0">
@@ -123,8 +123,8 @@ const Jobs = () => {
           </div>
         </div>
       </div>
-      <div className="w-full flex justify-center">
-        <div className="w-[85%] md:w-[43rem] lg:w-[60rem] xl:w-[70rem] flex flex-col items-center md:grid md:grid-cols-2 lg:grid-cols-3 md:gap-6">
+      <div className="w-full flex justify-center mt-10 md:mt-15">
+        <div className="w-[90%] md:w-[43rem] lg:w-[60rem] xl:w-[70rem] flex flex-col items-center md:grid md:grid-cols-2 lg:grid-cols-3 md:gap-6">
           {displayedJobs.length > 0 ? (
             displayedJobs.map((job) => <JobCards key={job.id} job={job} />)
           ) : (

@@ -6,7 +6,7 @@ const DescriptionBody = ({ job }) => {
   return (
     <main>
       <div className="companyInformationWrapper flex justify-center -mt-3 md:-mt-8 lg:-mt-8 sm:-mt-10">
-        <div className="w-[85%] md:w-[43rem] lg:w-[60rem] xl:w-[70rem] bg-white dark:bg-[#19202D] rounded-lg shadow-lg flex items-center">
+        <div className="w-[90%] md:w-[43rem] lg:w-[60rem] xl:w-[70rem] bg-white dark:bg-[#19202D] rounded-lg shadow-lg flex items-center">
           <div className="flex flex-col sm:flex-row sm:h-[8rem] items-center gap-6 sm:gap-8  w-full pt-3 pb-8 sm:py-0 sm:pr-6">
             {logoData && (
               <div
@@ -19,7 +19,7 @@ const DescriptionBody = ({ job }) => {
                 <img
                   src={logoData.src}
                   alt={`${job.company} logo`}
-                  className="w-full h-full sm:w-20 object-contain"
+                  className="w-full h-full sm:w-21 object-contain"
                 />
               </div>
             )}
@@ -44,7 +44,7 @@ const DescriptionBody = ({ job }) => {
       </div>
 
       <div className="w-full flex flex-col items-center mt-10">
-        <div className="bg-white dark:bg-[#19202D] w-[85%] md:w-[43rem] lg:w-[60rem] xl:w-[70rem] px-6 py-8 rounded-md">
+        <div className="bg-white dark:bg-[#19202D] w-[90%] md:w-[43rem] lg:w-[60rem] xl:w-[70rem] px-6 py-8 rounded-md">
           <div className="sm:flex justify-between items-center">
             <div className="flex flex-col gap-2">
               <span className="flex gap-2 items-center text-gray-500 dark:text-[#9DAEC2]">
@@ -62,16 +62,16 @@ const DescriptionBody = ({ job }) => {
             </button>
           </div>
 
-          <div className="leading-[1.625rem] sm:mt-8 text-[#19202D] dark:text-[#9DAEC2]">
+          <div className="leading-[1.625rem] mt-8 sm:mt-8 text-[#19202D] dark:text-[#9DAEC2]">
             <p>{job.description}</p>
             <h1 className="font-bold text-xl mt-8 dark:text-white">
               Requirements
             </h1>
             <p className="mt-5">{job.requirements.content}</p>
-            <ul className="list-disc list-outside marker:text-[#5964E0] mt-5 pl-4 space-y-2">
+            <ul className="list-disc list-outside marker:text-lg marker:text-[#5964E0] mt-5 pl-4 space-y-2">
               {job.requirements.items.map((item) => (
                 <li key={item}>
-                  <p className="pl-2">{item}</p>
+                  <p className="">{item}</p>
                 </li>
               ))}
             </ul>
@@ -82,14 +82,14 @@ const DescriptionBody = ({ job }) => {
             <ol className="list-decimal list-outside marker:text-[#5964E0] mt-5 pl-3 space-y-2">
               {job.role.items.map((item) => (
                 <li key={item}>
-                  <p className="pl-2">{item}</p>
+                  <p className="pl-1">{item}</p>
                 </li>
               ))}
             </ol>
           </div>
         </div>
         <div className="w-full bg-white  dark:bg-[#19202D] mt-8 py-6 flex justify-center">
-          <div className="w-[85%] md:w-[43rem] lg:w-[60rem] xl:w-[70rem] sm:flex sm:justify-between">
+          <div className="w-[90%] md:w-[43rem] lg:w-[60rem] xl:w-[70rem] sm:flex sm:justify-between">
             <div className="hidden sm:block">
               <h1 className="text-xl font-bold dark:text-white">
                 {job.position}

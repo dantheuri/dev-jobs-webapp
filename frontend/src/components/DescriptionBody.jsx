@@ -1,16 +1,44 @@
+import { getLogoWithFallback } from "../utils/logoImports";
+
 const DescriptionBody = ({ job }) => {
+  const logoData = getLogoWithFallback(job.company);
+
   return (
     <main>
       <div className="companyInformationWrapper flex justify-center -mt-3 md:-mt-8 lg:-mt-8 sm:-mt-10 lg:px-10">
-        <div className="w-[85%] md:w-[43rem] lg:w-[60rem] xl:w-[70rem] bg-white dark:bg-[#19202D] rounded-lg shadow-lg flex items-center px-3 sm:px-4 lg:px-6">
-          <div className="flex flex-col items-center gap-2 sm:gap-3 lg:gap-6 w-full py-3 sm:py-4">
-            <h1 className="text-xl font-bold dark:text-white">{job.company}</h1>
-            <p className="text-gray-500 dark:text-[#9DAEC2]">{job.website}</p>
-            <button className=" bg-[#5964E01A] w-[9rem] h-12">
-              <h2 className="text-base font-bold text-[#5964E0]">
-                Company Site
-              </h2>
-            </button>
+        <div className="w-[85%] md:w-[43rem] lg:w-[60rem] xl:w-[70rem] bg-white dark:bg-[#19202D] rounded-lg shadow-lg flex items-center px-3 sm:px-0 lg:px-6">
+          <div className="flex flex-col sm:flex-row sm:h-[8rem] items-center gap-6 sm:gap-8 lg:gap-6 w-full pt-3 pb-8 sm:py-0 pr-6">
+            {logoData && (
+              <div
+                className={`flex justify-center size-[3.5rem] sm:h-full sm:w-[8rem] -mt-10 sm:mt-0 flex-shrink-0 ${
+                  logoData.backgroundColor
+                    ? `${logoData.backgroundColor} rounded-lg p-2`
+                    : ""
+                }`}
+              >
+                <img
+                  src={logoData.src}
+                  alt={`${job.company} logo`}
+                  className="w-full h-full sm:w-20 object-contain"
+                />
+              </div>
+            )}
+            <div className="w-full flex flex-col gap-8 sm:flex-row sm:justify-between items-center">
+              <div className="space-y-3 w-full text-center sm:text-left">
+                <h1 className="text-xl font-bold dark:text-white">
+                  {job.company}
+                </h1>
+                <p className="text-gray-500 dark:text-[#9DAEC2]">
+                  {job.website}
+                </p>
+              </div>
+
+              <button className=" bg-[#5964E01A] w-[9rem] h-12 flex-shrink-0 mx-auto sm:mx-0">
+                <h2 className="text-base font-bold text-[#5964E0] dark:text-white">
+                  Company Site
+                </h2>
+              </button>
+            </div>
           </div>
         </div>
       </div>
@@ -63,9 +91,11 @@ const DescriptionBody = ({ job }) => {
         <div className="w-full bg-white  dark:bg-[#19202D] mt-8 py-6 flex justify-center">
           <div className="w-[85%] md:w-[43rem] lg:w-[60rem] xl:w-[70rem] sm:flex sm:justify-between">
             <div className="hidden sm:block">
-              <h1 className="text-xl font-bold dark:text-white">{job.position}</h1>
+              <h1 className="text-xl font-bold dark:text-white">
+                {job.position}
+              </h1>
               <p className="text-gray-500 dark:text-[#9DAEC2]">{job.company}</p>
-            </div>  
+            </div>
             <button className="bg-[#5964E0] sm:w-[9rem] w-full text-white px-4 py-2 rounded-md font-bold">
               Apply Now
             </button>

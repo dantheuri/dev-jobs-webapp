@@ -2,7 +2,7 @@ import JobCards from "./JobCards";
 import jobs from "../data/data.json";
 import SearchIcon from "./svgs/SearchIcon";
 import locationIcon from "../assets/desktop/icon-location.svg";
-import filterIcon from "../components/svgs/FilterIcon"; 
+import FilterIcon from "./svgs/FilterIcon";
 
 import { useState, useEffect } from "react";
 
@@ -80,8 +80,8 @@ const Jobs = () => {
               />
             </div>
             {/* Full Time Only Checkbox - hidden on mobile */}
-            <div className="flex items-center gap-4">
-              <div className="hidden md:flex items-center gap-2 flex-shrink-0">
+            <div className="flex items-center gap-3">
+              <div className="hidden md:flex gap-2 flex-shrink-0">
                 <input
                   type="checkbox"
                   id="fullTimeOnly"
@@ -98,15 +98,12 @@ const Jobs = () => {
               </div>
 
               {/* Filter Icon */}
-              <img
-                src={mobileFilterIcon}
-                alt="Mobile Filter Icon"
-                className="sm:hidden size-5 flex-shrink-0 "
-              />
+            
+              <FilterIcon className="sm:hidden size-6 flex-shrink-0 dark:text-white" /> 
               {/* Search Button */}
               <button
                 type="submit"
-                className="size-8 sm:w-16 sm:h-10 lg:w-[7.7rem] bg-[#5964E0] flex items-center justify-center rounded-md flex-shrink-0 hover:bg-[#4A55D1] transition-colors cursor-pointer"
+                className="size-8 sm:w-12 sm:h-10 lg:w-[7.7rem] bg-[#5964E0] flex items-center justify-center rounded-md flex-shrink-0 hover:bg-[#4A55D1] transition-colors cursor-pointer"
               >
                 <SearchIcon
                   color="white"
@@ -120,7 +117,7 @@ const Jobs = () => {
               <button
                 type="button"
                 onClick={handleReset}
-                className="size-8 sm:w-14 sm:h-10 lg:w-[7.7rem] bg-gray-300 text-gray-800 flex items-center justify-center rounded-md flex-shrink-0 hover:bg-gray-400 transition-colors cursor-pointer"
+                className="size-8 sm:w-12 sm:h-10 lg:w-[7.7rem] bg-gray-300 text-gray-800 flex items-center justify-center rounded-md flex-shrink-0 hover:bg-gray-400 transition-colors cursor-pointer"
               >
                 <span className="hidden lg:block font-semibold text-sm lg:text-base">
                   Reset
